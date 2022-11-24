@@ -1,0 +1,62 @@
+#styleTexte {
+    /* font-family: Impact, Haettenschweiler, 'Serif Bold Italic', sans-serif; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+ .miseEnForme {
+
+   display: flex;
+   -webkit-box-align: center;
+   align-items: center;
+   margin-bottom: 90px; 
+   color: azure;
+ }
+
+ .Point {
+   padding: 8px;
+ }
+
+ .Marge {
+   padding: 0px;
+   font-variant: inherit;
+   font-stretch: inherit;
+   font-family: inherit;
+   text-align: inherit;
+   color: initial;
+   margin: 0px;
+   font-size: 2.4em;
+   line-height: 1em;
+   font-weight: 600;
+   text-decoration: none;
+   font-style: inherit;
+ }
+
+ #texte1 {
+   color: rgb(255, 255, 255);
+   text-shadow: black 0.2px 0.2px 0.2px;
+ }
+
+ #navbar {
+   color: azure;
+ }
+
+ #couleurFond {
+    background-color:darkgray
+ }
+
+ #ImageSite {
+
+    height: 350px;
+    background-color: #3D3D3D;
+    background-image: url(../image/FondRestau.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 0.5em rgb(0 0 0 / 30%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+ }
+
+

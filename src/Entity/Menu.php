@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\MenuRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -20,106 +22,126 @@ class Menu
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $Burger;
+    private $nomMenu;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $prixMenu;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $HotDog;
+    private $imageMenu;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $Salades;
+    private $descriptionMenu;
+
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToMany(targetEntity=Commande::class, inversedBy="menus")
      */
-    private $Quesadillas;
+    private $Commande;
 
     /**
-     * @ORM\Column(type="string", length=15, nullable=true)
+     * @ORM\ManyToOne(targetEntity=Type::class, inversedBy="menu")
      */
-    private $Taille;
+    private $type;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $Prix;
+    public function __construct()
+    {
+        $this->types = new ArrayCollection();
+        $this->Commande = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getBurger(): ?string
+    public function getNomMenu(): ?string
     {
-        return $this->Burger;
+        return $this->nomMenu;
     }
 
-    public function setBurger(string $Burger): self
+    public function setNomMenu(string $nomMenu): self
     {
-        $this->Burger = $Burger;
+        $this->nomMenu = $nomMenu;
 
         return $this;
     }
 
-    public function getHotDog(): ?string
+    public function getPrixMenu(): ?float
     {
-        return $this->HotDog;
+        return $this->prixMenu;
     }
 
-    public function setHotDog(string $HotDog): self
+    public function setPrixMenu(float $prixMenu): self
     {
-        $this->HotDog = $HotDog;
+        $this->prixMenu = $prixMenu;
 
         return $this;
     }
 
-    public function getSalades(): ?string
+    public function getImageMenu(): ?string
     {
-        return $this->Salades;
+        return $this->imageMenu;
     }
 
-    public function setSalades(string $Salades): self
+    public function setImageMenu(string $imageMenu): self
     {
-        $this->Salades = $Salades;
+        $this->imageMenu = $imageMenu;
 
         return $this;
     }
 
-    public function getQuesadillas(): ?string
+    public function getDescriptionMenu(): ?string
     {
-        return $this->Quesadillas;
+        return $this->descriptionMenu;
     }
 
-    public function setQuesadillas(string $Quesadillas): self
+    public function setDescriptionMenu(?string $descriptionMenu): self
     {
-        $this->Quesadillas = $Quesadillas;
+        $this->descriptionMenu = $descriptionMenu;
 
         return $this;
     }
 
-    public function getTaille(): ?string
+  
+    /**
+     * @return Collection<int, Commande>
+     */
+    public function getCommande(): Collection
     {
-        return $this->Taille;
+        return $this->Commande;
     }
 
-    public function setTaille(?string $Taille): self
+    public function addCommande(Commande $commande): self
     {
-        $this->Taille = $Taille;
+        if (!$this->Commande->contains($commande)) {
+            $this->Commande[] = $commande;
+        }
 
         return $this;
     }
 
-    public function getPrix(): ?int
+    public function removeCommande(Commande $commande): self
     {
-        return $this->Prix;
+        $this->Commande->removeElement($commande);
+
+        return $this;
     }
 
-    public function setPrix(int $Prix): self
+    public function getType(): ?Type
     {
-        $this->Prix = $Prix;
+        return $this->type;
+    }
+
+    public function setType(?Type $type): self
+    {
+        $this->type = $type;
 
         return $this;
     }
