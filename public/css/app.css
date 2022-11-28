@@ -5,11 +5,11 @@
 
  .miseEnForme {
 
-   display: flex;
-   -webkit-box-align: center;
-   align-items: center;
-   margin-bottom: 90px; 
-   color: azure;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 90px; 
+  color: azure;
  }
 
  .Point {
@@ -17,23 +17,23 @@
  }
 
  .Marge {
-   padding: 0px;
-   font-variant: inherit;
-   font-stretch: inherit;
-   font-family: inherit;
-   text-align: inherit;
-   color: initial;
-   margin: 0px;
-   font-size: 2.4em;
-   line-height: 1em;
-   font-weight: 600;
-   text-decoration: none;
-   font-style: inherit;
+  padding: 0px;
+  font-variant: inherit;
+  font-stretch: inherit;
+  font-family: inherit;
+  text-align: inherit;
+  color: initial;
+  margin: 0px;
+  font-size: 2.4em;
+  line-height: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  font-style: inherit;
  }
 
  #texte1 {
-   color: rgb(255, 255, 255);
-   text-shadow: black 0.2px 0.2px 0.2px;
+  color: rgb(255, 255, 255);
+  text-shadow: black 0.2px 0.2px 0.2px;
  }
 
  #navbar {
@@ -46,17 +46,50 @@
 
  #ImageSite {
 
-    height: 350px;
-    background-color: #3D3D3D;
-    background-image: url(../image/FondRestau.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    box-shadow: 0 0 0.5em rgb(0 0 0 / 30%);
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-
+  height: 350px;
+  background-color: #3D3D3D;
+  background-image: url(../image/FondRestau.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 0 0.5em rgb(0 0 0 / 30%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
  }
 
+ .ulForm {
+
+  display: flex;
+  flex-flow: row wrap;
+ }
+
+ .liForm {
+
+  list-style: none;
+  white-space: nowrap;
+  color: rgb(239, 68, 35);
+ }
+ 
+ .SpanLi {
+
+  padding: 0px;
+  font-variant: inherit;
+  font-stretch: inherit;
+  font-family: inherit;
+  text-align: inherit;
+  color: rgb(239, 68, 35);
+  margin: 0px;
+  font-size: 0.95em;
+  line-height: 1em;
+  font-weight: 400;
+  text-decoration: none;
+  text-shadow: black 0.2px 0.2px 0.2px;
+  font-style: inherit;
+ }
+ 
+ .li:not(:last-child)::after {
+  content: "•";
+  margin-left: 8px;
+ }
 
