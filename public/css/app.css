@@ -244,6 +244,81 @@
 
   color: initial;
 }
+
+.DivPage {
+
+  display: flex;
+  flex-direction: row;
+}
+
+.Div2Page {
+
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+}
+
+.div3Page {
+
+  position: relative;
+  max-width: calc(650px);
+  border-radius: 25px;
+}
+
+.Div4PageSlide {
+
+position: relative;
+display: block;
+box-sizing: border-box;
+-webkit-user-select: none;
+user-select: none;
+-webkit-touch-callout: none;
+-khtml-user-select: none;
+touch-action: pan-y;
+-webkit-tap-highlight-color: transparent;
+}
+
+.Div5PageList {
+
+overflow: hidden;
+margin: 0;
+padding: 0;
+}
+
+.Div6PageTrack {
+
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Div6PageTrack::before {
+
+display: table;
+content: "";
+}
+
+.Div8Page {
+
+position: relative;
+max-width: calc(650px);
+border-radius: 25px;
+}
+
+.Image1 {
+
+  height: 405px;
+  border-radius: 25px;
+  display: flex;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+  object-position: center center;
+  width: 100%;
+} 
  
 
 
