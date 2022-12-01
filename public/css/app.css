@@ -278,6 +278,57 @@ touch-action: pan-y;
 -webkit-tap-highlight-color: transparent;
 }
 
+.Div4FlecheGauche {
+
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.Div4FlecheDroite {
+
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.DivButton {
+
+box-sizing: border-box;
+margin: 0px;
+font: inherit;
+text-decoration: none;
+cursor: pointer;
+border: none;
+outline: 0px;
+white-space: nowrap;
+border-radius: 100%;
+transition: all 0.2s ease-in-out 0s;
+display: flex;
+width: 55px;
+ height: 55px;
+}
+
+.DivButton.outLined {
+
+  background: transparent;
+  border: 1px solid rgb(232, 232, 232);
+}
+
+.Style {
+
+width: 5850px;
+opacity: 1;
+transform: translate3d(-650px, 0px, 0px);
+}
+
+.Style2 {
+
+width: 650px;
+}
+
 .Div5PageList {
 
 overflow: hidden;
